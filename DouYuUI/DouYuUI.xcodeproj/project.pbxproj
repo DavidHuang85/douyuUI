@@ -90,8 +90,9 @@
 		5FD046FC28A222C100F17B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5F24FAD028A0E529009B6960 /* Main.storyboard */,
-				5FD0470228A228D300F17B2A /* MainViewController.swift */,
+				5FD2D28328A233480002E612 /* Controller */,
+				5FD2D28428A233480002E612 /* Model */,
+				5FD2D28528A233480002E612 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -99,7 +100,9 @@
 		5FD046FD28A222C900F17B2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5FD046ED28A2203000F17B2A /* Home.storyboard */,
+				5FD2D29428A233D20002E612 /* Controller */,
+				5FD2D29228A233D10002E612 /* Model */,
+				5FD2D29328A233D20002E612 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -133,6 +136,51 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		5FD2D28328A233480002E612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F24FAD028A0E529009B6960 /* Main.storyboard */,
+				5FD0470228A228D300F17B2A /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5FD2D28428A233480002E612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FD2D28528A233480002E612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FD2D29228A233D10002E612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FD2D29328A233D20002E612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FD2D29428A233D20002E612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046ED28A2203000F17B2A /* Home.storyboard */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

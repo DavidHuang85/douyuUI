@@ -19,12 +19,14 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController {
-    //设置UI
+    
+    //MARK - 设置UI
     private func setupUI () {
-//        navigationItem.title = "首页"
         //设置首页导航栏
         setupNavigationBar()
     }
+    
+
     
     private func setupNavigationBar () {
         //导航栏左侧
@@ -42,7 +44,6 @@ extension HomeViewController {
         
         
         //方法二 便利构造器
-        
         let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
         let searchitem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
@@ -51,6 +52,8 @@ extension HomeViewController {
         
         navigationItem.rightBarButtonItems = [historyItem,searchitem,qrcodeItem];
     }
+    
+    
 }
 
 

@@ -13,7 +13,6 @@
 		5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD328A0E52D009B6960 /* Assets.xcassets */; };
 		5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */; };
 		5FBA646728A11BF80070F4D2 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 5FBA646628A11BF80070F4D2 /* Classes */; };
-		5FBA646928A1EBA70070F4D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		5F24FAD628A0E52D009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F24FAD828A0E52D009B6960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FBA646628A11BF80070F4D2 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
-		5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,6 @@
 		5F24FABE28A0E529009B6960 = {
 			isa = PBXGroup;
 			children = (
-				5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */,
 				5F24FAC928A0E529009B6960 /* DouYuUI */,
 				5F24FAC828A0E529009B6960 /* Products */,
 			);
@@ -131,7 +128,6 @@
 				5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */,
 				5FBA646728A11BF80070F4D2 /* Classes in Resources */,
 				5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */,
-				5FBA646928A1EBA70070F4D2 /* Default-568h@2x.png in Resources */,
 				5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DouYuUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -307,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DouYuUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

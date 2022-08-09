@@ -9,7 +9,7 @@
 import UIKit
 
 
-private let kPageTitleViewH : CGFloat = 40
+private let kPageTitleViewH : CGFloat = 70
 
 class HomeViewController: UIViewController {
     
@@ -19,8 +19,6 @@ class HomeViewController: UIViewController {
         let titles  = ["推荐","游戏","娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: titleFrame, titles: titles);
         
-        // MARK:- for test hjl
-        pageTitleView.backgroundColor = .red
         return pageTitleView
     }()
 
@@ -31,13 +29,24 @@ class HomeViewController: UIViewController {
         
         //设置UI
         setupUI()
-    }    
+    }
 }
 
 extension HomeViewController {
     
     // MARK:- 设置UI
     private func setupUI () {
+        
+        //0 不需要调整 scrollView的内边距
+        
+        if #available(iOS 11.0, *) {
+//            scrollView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        
+        
+        
         //设置首页导航栏
         setupNavigationBar()
         
@@ -67,8 +76,6 @@ extension HomeViewController {
         let searchitem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
 
-        
-        
         navigationItem.rightBarButtonItems = [historyItem,searchitem,qrcodeItem];
     }
     

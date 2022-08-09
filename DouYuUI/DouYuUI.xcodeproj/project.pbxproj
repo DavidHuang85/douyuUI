@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24FACA28A0E529009B6960 /* AppDelegate.swift */; };
-		5F24FACD28A0E529009B6960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24FACC28A0E529009B6960 /* SceneDelegate.swift */; };
 		5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24FACE28A0E529009B6960 /* ViewController.swift */; };
 		5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD028A0E529009B6960 /* Main.storyboard */; };
 		5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD328A0E52D009B6960 /* Assets.xcassets */; };
 		5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */; };
+		5FBA646728A11BF80070F4D2 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 5FBA646628A11BF80070F4D2 /* Classes */; };
+		5FBA646928A1EBA70070F4D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F24FAC728A0E529009B6960 /* DouYuUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F24FAC728A0E529009B6960 /* 斗鱼UI模仿.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼UI模仿.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F24FACA28A0E529009B6960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F24FACC28A0E529009B6960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F24FACE28A0E529009B6960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F24FAD128A0E529009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F24FAD328A0E52D009B6960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F24FAD628A0E52D009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F24FAD828A0E52D009B6960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FBA646628A11BF80070F4D2 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		5F24FABE28A0E529009B6960 = {
 			isa = PBXGroup;
 			children = (
+				5FBA646828A1EBA60070F4D2 /* Default-568h@2x.png */,
 				5F24FAC928A0E529009B6960 /* DouYuUI */,
 				5F24FAC828A0E529009B6960 /* Products */,
 			);
@@ -48,7 +51,7 @@
 		5F24FAC828A0E529009B6960 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F24FAC728A0E529009B6960 /* DouYuUI.app */,
+				5F24FAC728A0E529009B6960 /* 斗鱼UI模仿.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,8 +59,8 @@
 		5F24FAC928A0E529009B6960 /* DouYuUI */ = {
 			isa = PBXGroup;
 			children = (
+				5FBA646628A11BF80070F4D2 /* Classes */,
 				5F24FACA28A0E529009B6960 /* AppDelegate.swift */,
-				5F24FACC28A0E529009B6960 /* SceneDelegate.swift */,
 				5F24FACE28A0E529009B6960 /* ViewController.swift */,
 				5F24FAD028A0E529009B6960 /* Main.storyboard */,
 				5F24FAD328A0E52D009B6960 /* Assets.xcassets */,
@@ -84,7 +87,7 @@
 			);
 			name = DouYuUI;
 			productName = DouYuUI;
-			productReference = 5F24FAC728A0E529009B6960 /* DouYuUI.app */;
+			productReference = 5F24FAC728A0E529009B6960 /* 斗鱼UI模仿.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */,
+				5FBA646728A11BF80070F4D2 /* Classes in Resources */,
 				5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */,
+				5FBA646928A1EBA70070F4D2 /* Default-568h@2x.png in Resources */,
 				5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +145,6 @@
 			files = (
 				5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */,
 				5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */,
-				5F24FACD28A0E529009B6960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +297,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = david.com.DouYuUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "斗鱼UI模仿";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -312,7 +316,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = david.com.DouYuUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "斗鱼UI模仿";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

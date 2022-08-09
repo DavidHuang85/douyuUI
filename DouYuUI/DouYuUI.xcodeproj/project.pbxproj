@@ -12,7 +12,10 @@
 		5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD028A0E529009B6960 /* Main.storyboard */; };
 		5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD328A0E52D009B6960 /* Assets.xcassets */; };
 		5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */; };
-		5FBA646728A11BF80070F4D2 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 5FBA646628A11BF80070F4D2 /* Classes */; };
+		5FD046EF28A2203100F17B2A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046ED28A2203000F17B2A /* Home.storyboard */; };
+		5FD046F228A220AB00F17B2A /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F028A220AB00F17B2A /* Live.storyboard */; };
+		5FD046F528A220E200F17B2A /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F328A220E200F17B2A /* Follow.storyboard */; };
+		5FD046F828A2211600F17B2A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F628A2211600F17B2A /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +26,10 @@
 		5F24FAD328A0E52D009B6960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F24FAD628A0E52D009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F24FAD828A0E52D009B6960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FBA646628A11BF80070F4D2 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		5FD046EE28A2203000F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		5FD046F128A220AB00F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Live.storyboard; sourceTree = "<group>"; };
+		5FD046F428A220E200F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
+		5FD046F728A2211600F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 		5F24FAC928A0E529009B6960 /* DouYuUI */ = {
 			isa = PBXGroup;
 			children = (
-				5FBA646628A11BF80070F4D2 /* Classes */,
+				5FD046FB28A222AC00F17B2A /* Classes */,
 				5F24FACA28A0E529009B6960 /* AppDelegate.swift */,
 				5F24FACE28A0E529009B6960 /* ViewController.swift */,
 				5F24FAD028A0E529009B6960 /* Main.storyboard */,
@@ -65,6 +71,65 @@
 				5F24FAD828A0E52D009B6960 /* Info.plist */,
 			);
 			path = DouYuUI;
+			sourceTree = "<group>";
+		};
+		5FD046FB28A222AC00F17B2A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046FC28A222C100F17B2A /* Main */,
+				5FD046FD28A222C900F17B2A /* Home */,
+				5FD046FE28A222D300F17B2A /* Live */,
+				5FD046FF28A222DC00F17B2A /* Follow */,
+				5FD0470028A222E300F17B2A /* Profile */,
+				5FD0470128A222EA00F17B2A /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5FD046FC28A222C100F17B2A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5FD046FD28A222C900F17B2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046ED28A2203000F17B2A /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5FD046FE28A222D300F17B2A /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046F028A220AB00F17B2A /* Live.storyboard */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		5FD046FF28A222DC00F17B2A /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046F328A220E200F17B2A /* Follow.storyboard */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		5FD0470028A222E300F17B2A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5FD046F628A2211600F17B2A /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5FD0470128A222EA00F17B2A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */,
-				5FBA646728A11BF80070F4D2 /* Classes in Resources */,
+				5FD046EF28A2203100F17B2A /* Home.storyboard in Resources */,
+				5FD046F828A2211600F17B2A /* Profile.storyboard in Resources */,
+				5FD046F228A220AB00F17B2A /* Live.storyboard in Resources */,
+				5FD046F528A220E200F17B2A /* Follow.storyboard in Resources */,
 				5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */,
 				5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */,
 			);
@@ -161,6 +229,38 @@
 				5F24FAD628A0E52D009B6960 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD046ED28A2203000F17B2A /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD046EE28A2203000F17B2A /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD046F028A220AB00F17B2A /* Live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD046F128A220AB00F17B2A /* Base */,
+			);
+			name = Live.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD046F328A220E200F17B2A /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD046F428A220E200F17B2A /* Base */,
+			);
+			name = Follow.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD046F628A2211600F17B2A /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD046F728A2211600F17B2A /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="a89-sg-hrl">
             <objects>
-                <tabBarController id="hYD-vS-tJY" sceneMemberID="viewController">
+                <tabBarController id="hYD-vS-tJY" customClass="MainViewController" customModule="斗鱼UI模仿" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bYD-qO-M4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

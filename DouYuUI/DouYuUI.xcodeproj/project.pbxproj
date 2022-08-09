@@ -16,6 +16,7 @@
 		5FD046F228A220AB00F17B2A /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F028A220AB00F17B2A /* Live.storyboard */; };
 		5FD046F528A220E200F17B2A /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F328A220E200F17B2A /* Follow.storyboard */; };
 		5FD046F828A2211600F17B2A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F628A2211600F17B2A /* Profile.storyboard */; };
+		5FD0470328A228D300F17B2A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0470228A228D300F17B2A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5FD046F128A220AB00F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Live.storyboard; sourceTree = "<group>"; };
 		5FD046F428A220E200F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
 		5FD046F728A2211600F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		5FD0470228A228D300F17B2A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,6 @@
 				5FD046FB28A222AC00F17B2A /* Classes */,
 				5F24FACA28A0E529009B6960 /* AppDelegate.swift */,
 				5F24FACE28A0E529009B6960 /* ViewController.swift */,
-				5F24FAD028A0E529009B6960 /* Main.storyboard */,
 				5F24FAD328A0E52D009B6960 /* Assets.xcassets */,
 				5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */,
 				5F24FAD828A0E52D009B6960 /* Info.plist */,
@@ -89,6 +90,8 @@
 		5FD046FC28A222C100F17B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5F24FAD028A0E529009B6960 /* Main.storyboard */,
+				5FD0470228A228D300F17B2A /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD0470328A228D300F17B2A /* MainViewController.swift in Sources */,
 				5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */,
 				5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */,
 			);

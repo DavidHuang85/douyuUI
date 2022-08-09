@@ -28,11 +28,7 @@ extension HomeViewController {
     
     private func setupNavigationBar () {
         //导航栏左侧
-        let btn = UIButton()
-        btn.setImage(UIImage(named:"logo"), for: .normal)
-        btn.sizeToFit()
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
         
         //导航栏右侧
         let size = CGSize(width: 40, height: 40)

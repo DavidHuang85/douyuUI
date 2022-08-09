@@ -8,22 +8,41 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
 
+private let kPageTitleViewH : CGFloat = 40
+
+class HomeViewController: UIViewController {
+    
+    // MARK:-  懒加载属性
+    private lazy var pageTitleView : PageTitleView = {
+        let titleFrame : CGRect = CGRect(x: 0, y: kStatusH + kNavigationBarH, width: kScreenW, height: kPageTitleViewH)
+        let titles  = ["推荐","游戏","娱乐","趣玩"]
+        let pageTitleView = PageTitleView(frame: titleFrame, titles: titles);
+        
+        // MARK:- for test hjl
+        pageTitleView.backgroundColor = .red
+        return pageTitleView
+    }()
+
+    
+    // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //设置UI
         setupUI()
-    }
+    }    
 }
 
 extension HomeViewController {
     
-    //MARK - 设置UI
+    // MARK:- 设置UI
     private func setupUI () {
         //设置首页导航栏
         setupNavigationBar()
+        
+        // MARK:- 添加pageTitleView
+        view.addSubview(pageTitleView)
     }
     
 

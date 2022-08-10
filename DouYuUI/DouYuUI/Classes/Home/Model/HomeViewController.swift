@@ -26,9 +26,16 @@ class HomeViewController: UIViewController {
     }()
     
     private lazy var pageContentView : PageContentView = { [weak self] in
+        
+        //设置pageContentView的高度
         let pageContentViewH = kScreenH - (kNavigationBarH + kStatusH + kPageTitleViewH) - UIDevice.devSystemTabBarHeigh() - UIDevice.devSafeBottomMargin()
         var arrVC : [UIViewController] = [UIViewController]()
-        for _ in 0..<4 {
+        
+        //添加推荐VC
+        let recommendVc = RecommendViewController()
+        arrVC.append(recommendVc)
+        
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.RandomColor()
             arrVC.append(vc)

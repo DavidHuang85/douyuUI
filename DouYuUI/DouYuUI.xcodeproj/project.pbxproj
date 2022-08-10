@@ -15,6 +15,7 @@
 		5F61121728A283BD0077C152 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121628A283BD0077C152 /* PageContentView.swift */; };
 		5F61121928A2885C0077C152 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121828A2885C0077C152 /* UIColor-Extension.swift */; };
 		5F61121B28A39E6A0077C152 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */; };
+		5F61121D28A3B11A0077C152 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121C28A3B1190077C152 /* RecommendViewController.swift */; };
 		5FD046EF28A2203100F17B2A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046ED28A2203000F17B2A /* Home.storyboard */; };
 		5FD046F228A220AB00F17B2A /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F028A220AB00F17B2A /* Live.storyboard */; };
 		5FD046F528A220E200F17B2A /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD046F328A220E200F17B2A /* Follow.storyboard */; };
@@ -37,6 +38,7 @@
 		5F61121628A283BD0077C152 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		5F61121828A2885C0077C152 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
+		5F61121C28A3B1190077C152 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		5FD046EE28A2203000F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		5FD046F128A220AB00F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Live.storyboard; sourceTree = "<group>"; };
 		5FD046F428A220E200F17B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuUI/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				5FD046ED28A2203000F17B2A /* Home.storyboard */,
 				5FD2D29528A237F90002E612 /* HomeViewController.swift */,
+				5F61121C28A3B1190077C152 /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */,
 				5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */,
 				5FD2D29628A237F90002E612 /* HomeViewController.swift in Sources */,
+				5F61121D28A3B11A0077C152 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

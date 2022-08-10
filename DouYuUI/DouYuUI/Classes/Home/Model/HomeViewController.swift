@@ -14,13 +14,35 @@ private let kPageTitleViewH : CGFloat = 70
 class HomeViewController: UIViewController {
     
     // MARK:-  懒加载属性
-    private lazy var pageTitleView : PageTitleView = {
+    private lazy var pageTitleView : PageTitleView = { [weak self] in
         let titleFrame : CGRect = CGRect(x: 0, y: kStatusH + kNavigationBarH, width: kScreenW, height: kPageTitleViewH)
         let titles  = ["推荐","游戏","娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: titleFrame, titles: titles);
         
+    
+        pageTitleView.delegate = self
+        
         return pageTitleView
     }()
+    
+    private lazy var pageContentView : PageContentView = {
+        let pageContentViewH = kScreenH - (kNavigationBarH + kStatusH + kPageTitleViewH)
+        var arrVC : [UIViewController] = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.RandomColor()
+            arrVC.append(vc)
+        }
+        
+        let view = PageContentView(frame: CGRect(x: 0, y: kNavigationBarH + kStatusH + kPageTitleViewH, width:kScreenW, height: pageContentViewH), chileVcs: arrVC, parentVc: self)
+        
+        // MARK:- for test hjl
+        view.backgroundColor = UIColor.RandomColor()
+        return view
+        
+    } ()
+    
+    
 
     
     // MARK:- 系统回调函数
@@ -52,6 +74,9 @@ extension HomeViewController {
         
         // MARK:- 添加pageTitleView
         view.addSubview(pageTitleView)
+        
+        // MARK:- 添加pageContentView
+        view.addSubview(pageContentView)
     }
     
 
@@ -82,4 +107,9 @@ extension HomeViewController {
     
 }
 
-
+// MARK:- 遵循PageTitleViewDelegate
+extension HomeViewController : PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedInex index: Int) {
+        pageContentView.setupCurrentIndex(currentIndex: index)
+    }
+}

@@ -10,11 +10,21 @@ import UIKit
 
 private let kScrollLineH : CGFloat = 2
 
+// MARK:- PageTitleViewDelegate 代理方法
+protocol PageTitleViewDelegate : class {
+    func pageTitleView(titleView : PageTitleView , selectedInex index : Int)
+}
+
 class PageTitleView: UIView {
-    
     // MARK:- 定义属性
+    //点击lable事件的代理对象
+    weak var delegate : PageTitleViewDelegate?
+    
+    //当前选择lable的下标
+    private var currentIndex = 0
+    
     private var titles : [String]
-    private var lables : [UILabel] = [UILabel]()
+    private var titleLables : [UILabel] = [UILabel]()
     private var scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.bounces = false
@@ -36,11 +46,7 @@ class PageTitleView: UIView {
         
     }()
     
-    
-    
-
-    
-    // MARK:- 构造函数
+    //构造函数
     init(frame: CGRect, titles : [String]) {
         self.titles = titles
         super.init(frame: frame)
@@ -53,14 +59,15 @@ class PageTitleView: UIView {
     }
 }
 
+// MARK:- 设置UI
 extension PageTitleView {
-    // MARK:- 设置UI
+    
     private func setupUI() {
         //添加ScrollView
         addSubview(scrollView)
         scrollView.frame = bounds
         
-        //添加 titles 所对应的 lables
+        //添加 titles 所对应的 titleLables
         setupTitleLables()
         
         //添加底部滑块 和 底部的线
@@ -85,11 +92,16 @@ extension PageTitleView {
             
             lable.frame = CGRect(x: lableX, y: lableY, width: lableW, height: lableH)
             scrollView.addSubview(lable)
-            lables.append(lable)
+            titleLables.append(lable)
             
             if index == 0 {
                 lable.textColor = .orange
             }
+            
+            
+            lable.isUserInteractionEnabled = true
+            let lableGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLableClick(_:)))
+            lable.addGestureRecognizer(lableGes)
         }
     }
     
@@ -102,9 +114,41 @@ extension PageTitleView {
         
         
         
-        guard let firstLable = lables.first else {return}
+        guard let firstLable = titleLables.first else {return}
         
         addSubview(scrollMenu)
         scrollMenu.frame = CGRect(x: firstLable.frame.origin.x, y: frame.height - kScrollLineH, width: firstLable.bounds.width, height: kScrollLineH)
+    }
+}
+
+// MARK:- lable的点击事件
+extension PageTitleView {
+    @objc private func titleLableClick(_ tapGes : UITapGestureRecognizer) {
+        print("====")
+        
+        //获取当前点击的 lable
+        guard let currentLable = (tapGes.view as? UILabel) else { return }
+        
+        if currentLable.tag == currentIndex {
+            print("点击了相同的Lable")
+            return
+        }
+        
+        
+        //处理新旧lable 的文字颜色
+        let oldLable = titleLables[currentIndex]
+        oldLable.textColor = .darkGray
+        currentLable.textColor = .orange
+        
+        currentIndex = currentLable.tag
+        
+        //处理滑块的位置
+        let scrollLineX = CGFloat(currentLable.tag) * scrollMenu.frame.width
+        UIView.animate(withDuration: 0.25) {
+            self.scrollMenu.frame.origin.x = scrollLineX
+        }
+        
+        //将点击的相关参数传递出去
+        delegate?.pageTitleView(titleView: self, selectedInex: currentIndex)
     }
 }

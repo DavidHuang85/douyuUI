@@ -25,8 +25,8 @@ class HomeViewController: UIViewController {
         return pageTitleView
     }()
     
-    private lazy var pageContentView : PageContentView = {
-        let pageContentViewH = kScreenH - (kNavigationBarH + kStatusH + kPageTitleViewH)
+    private lazy var pageContentView : PageContentView = { [weak self] in
+        let pageContentViewH = kScreenH - (kNavigationBarH + kStatusH + kPageTitleViewH) - UIDevice.devSystemTabBarHeigh() - UIDevice.devSafeBottomMargin()
         var arrVC : [UIViewController] = [UIViewController]()
         for _ in 0..<4 {
             let vc = UIViewController()
@@ -34,10 +34,10 @@ class HomeViewController: UIViewController {
             arrVC.append(vc)
         }
         
-        let view = PageContentView(frame: CGRect(x: 0, y: kNavigationBarH + kStatusH + kPageTitleViewH, width:kScreenW, height: pageContentViewH), chileVcs: arrVC, parentVc: self)
+        let view = PageContentView(frame: CGRect(x: 0, y: kNavigationBarH + kStatusH + kPageTitleViewH, width:kScreenW, height: pageContentViewH), chileVcs: arrVC, parentVc: self!)
         
-        // MARK:- for test hjl
         view.backgroundColor = UIColor.RandomColor()
+        view.delegate = self
         return view
         
     } ()
@@ -51,12 +51,35 @@ class HomeViewController: UIViewController {
         
         //设置UI
         setupUI()
+        
+        //my test
+        myTest()
+        
+        
+        
     }
 }
 
 extension HomeViewController {
     
-    // MARK:- 设置UI
+    // MARK:- myTest
+    private func myTest() {
+        
+        // MARK:- for test hjl
+        print("****相关测试数据 开始****")
+        print("当前设备的名称 UIDevice.current.model是:\(UIDevice.current.model)")
+        
+        print("当前设备的名称 UIDevice.current.systemName是:\(UIDevice.current.systemName)")
+        
+        print("当前设备的顶部安全区域高度 UIDevice.devSafeDistanceTop()是:\(UIDevice.devSafeDistanceTop())")
+        
+        print("当前设备的底部部安全区域高度 UIDevice.devSafeBottomMargin()是:\(UIDevice.devSafeBottomMargin())")
+        
+        print("当前设备的tabBar高度 UIDevice.devSystemTabBarHeigh()是:\(UIDevice.devSystemTabBarHeigh())")
+        print("====相关测试数据 结束====")
+    }
+    
+    // 设置UI
     private func setupUI () {
         
         //0 不需要调整 scrollView的内边距
@@ -107,9 +130,17 @@ extension HomeViewController {
     
 }
 
-// MARK:- 遵循PageTitleViewDelegate
+// MARK:- 遵循PageTitleViewDelegate协议
 extension HomeViewController : PageTitleViewDelegate {
     func pageTitleView(titleView: PageTitleView, selectedInex index: Int) {
         pageContentView.setupCurrentIndex(currentIndex: index)
+    }
+}
+
+// MARK:- 遵循PageContentViewDelegate协议
+extension HomeViewController : PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        pageTitleView.setTileWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

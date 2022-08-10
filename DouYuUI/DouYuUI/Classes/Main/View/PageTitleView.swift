@@ -8,13 +8,17 @@
 
 import UIKit
 
+// MARK:- 设置常量
 private let kScrollLineH : CGFloat = 2
+private let kNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
+private let kSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
 
-// MARK:- PageTitleViewDelegate 代理方法
+// MARK:- 定义协议
 protocol PageTitleViewDelegate : class {
     func pageTitleView(titleView : PageTitleView , selectedInex index : Int)
 }
 
+// MARK:- 定义类
 class PageTitleView: UIView {
     // MARK:- 定义属性
     //点击lable事件的代理对象
@@ -85,7 +89,7 @@ extension PageTitleView {
             lable.text = title
             lable.tag = index
             lable.font = .systemFont(ofSize: 18)
-            lable.textColor = .darkGray
+            lable.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
             lable.textAlignment = .center
             
             let lableX : CGFloat = lableW * CGFloat(index)
@@ -95,7 +99,7 @@ extension PageTitleView {
             titleLables.append(lable)
             
             if index == 0 {
-                lable.textColor = .orange
+                lable.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
             }
             
             
@@ -124,8 +128,6 @@ extension PageTitleView {
 // MARK:- lable的点击事件
 extension PageTitleView {
     @objc private func titleLableClick(_ tapGes : UITapGestureRecognizer) {
-        print("====")
-        
         //获取当前点击的 lable
         guard let currentLable = (tapGes.view as? UILabel) else { return }
         
@@ -137,8 +139,8 @@ extension PageTitleView {
         
         //处理新旧lable 的文字颜色
         let oldLable = titleLables[currentIndex]
-        oldLable.textColor = .darkGray
-        currentLable.textColor = .orange
+        oldLable.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+        currentLable.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         
         currentIndex = currentLable.tag
         
@@ -150,5 +152,32 @@ extension PageTitleView {
         
         //将点击的相关参数传递出去
         delegate?.pageTitleView(titleView: self, selectedInex: currentIndex)
+    }
+}
+
+// MARK:- 对外暴露的公开方法
+extension PageTitleView {
+    func setTileWithProgress(progress : CGFloat , sourceIndex : Int, targetIndex : Int){
+        
+        let sourceLable = titleLables[sourceIndex]
+        let targetLable = titleLables[targetIndex]
+        
+        
+        //处理滑块的渐变
+        let moveTotalX = targetLable.frame.origin.x - sourceLable.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollMenu.frame.origin.x = sourceLable.frame.origin.x + moveX
+        
+        //处理颜色的渐变
+        let colorDeltaTotal = (kSelectColor.0 - kNormalColor.0,kSelectColor.1 - kNormalColor.1,kSelectColor.2 - kNormalColor.2)
+        
+        let colorDetal = (colorDeltaTotal.0 * progress, colorDeltaTotal.1 * progress,colorDeltaTotal.2 * progress)
+        
+        
+        sourceLable.textColor = UIColor(r: kSelectColor.0 - colorDetal.0, g:  kSelectColor.1 - colorDetal.1, b:  kSelectColor.2 - colorDetal.2)
+        
+        targetLable.textColor = UIColor(r: kNormalColor.0 + colorDetal.0, g: kNormalColor.1 + colorDetal.1, b: kNormalColor.2 + colorDetal.2)
+        
+        currentIndex = targetIndex
     }
 }

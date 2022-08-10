@@ -24,7 +24,7 @@ class RecommendViewController: UIViewController {
     
     
     // MARK:- 定义属性
-    private lazy var collectionView : UICollectionView = {
+    private lazy var collectionView : UICollectionView = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         layout.minimumLineSpacing = 0
@@ -33,15 +33,15 @@ class RecommendViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
-        collectionView.backgroundColor = .systemYellow
+        collectionView.backgroundColor = .white
+        
+        
         collectionView.dataSource = self
-        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
-
-        
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader , withReuseIdentifier: kHeadViewID)
         
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight];
+        
         
         return collectionView
     } ()

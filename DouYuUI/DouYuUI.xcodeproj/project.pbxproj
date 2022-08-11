@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1893E06A6ABA940E074C9BB5 /* Pods_DouYuUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CFA04DF98C83BFB40BBFD9 /* Pods_DouYuUI.framework */; };
 		5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24FACA28A0E529009B6960 /* AppDelegate.swift */; };
-		5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24FACE28A0E529009B6960 /* ViewController.swift */; };
 		5F24FAD228A0E529009B6960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD028A0E529009B6960 /* Main.storyboard */; };
 		5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD328A0E52D009B6960 /* Assets.xcassets */; };
 		5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */; };
+		5F5E25B528A4FBE2005C0140 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25B428A4FBE2005C0140 /* NetworkTools.swift */; };
 		5F61121728A283BD0077C152 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121628A283BD0077C152 /* PageContentView.swift */; };
 		5F61121928A2885C0077C152 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121828A2885C0077C152 /* UIColor-Extension.swift */; };
 		5F61121B28A39E6A0077C152 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */; };
@@ -38,11 +38,11 @@
 		3594377FF08D2741A6770842 /* Pods-DouYuUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuUI.release.xcconfig"; path = "Target Support Files/Pods-DouYuUI/Pods-DouYuUI.release.xcconfig"; sourceTree = "<group>"; };
 		5F24FAC728A0E529009B6960 /* 斗鱼UI模仿.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼UI模仿.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F24FACA28A0E529009B6960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F24FACE28A0E529009B6960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F24FAD128A0E529009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F24FAD328A0E52D009B6960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F24FAD628A0E52D009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F24FAD828A0E52D009B6960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F5E25B428A4FBE2005C0140 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		5F61121628A283BD0077C152 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		5F61121828A2885C0077C152 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 			children = (
 				5FD046FB28A222AC00F17B2A /* Classes */,
 				5F24FACA28A0E529009B6960 /* AppDelegate.swift */,
-				5F24FACE28A0E529009B6960 /* ViewController.swift */,
 				5F24FAD328A0E52D009B6960 /* Assets.xcassets */,
 				5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */,
 				5F24FAD828A0E52D009B6960 /* Info.plist */,
@@ -179,6 +178,7 @@
 			children = (
 				5FD2D29728A241870002E612 /* Extension */,
 				5FD2D29C28A255250002E612 /* common.swift */,
+				5F5E25B428A4FBE2005C0140 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -254,7 +254,6 @@
 				8DD29C656852A9221273F633 /* Pods-DouYuUI.debug.xcconfig */,
 				3594377FF08D2741A6770842 /* Pods-DouYuUI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -380,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5E25B528A4FBE2005C0140 /* NetworkTools.swift in Sources */,
 				5FD2D29D28A255250002E612 /* common.swift in Sources */,
 				5FD2D29B28A251C00002E612 /* PageTitleView.swift in Sources */,
 				5FD2D29928A242530002E612 /* UIBarButtonItem-Extension.swift in Sources */,
@@ -387,7 +387,6 @@
 				5F61121728A283BD0077C152 /* PageContentView.swift in Sources */,
 				5F61121928A2885C0077C152 /* UIColor-Extension.swift in Sources */,
 				5FD0470328A228D300F17B2A /* MainViewController.swift in Sources */,
-				5F24FACF28A0E529009B6960 /* ViewController.swift in Sources */,
 				5FBA32F428A3D5210003E212 /* CollectionNormalCell.swift in Sources */,
 				5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */,
 				5FBA32F028A3CE9D0003E212 /* CollectionHeaderView.swift in Sources */,

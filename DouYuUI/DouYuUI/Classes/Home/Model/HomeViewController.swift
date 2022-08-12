@@ -84,10 +84,9 @@ extension HomeViewController {
         print("====相关测试数据 结束====")
         
 //        http://capi.douyucdn.cn/api/v1/getbigDataRoom
-        
 //        let url = "https://httpbin.org/get"
-//        let url2 = "http://capi.douyucdn.cn/api/v1/getbigDataRoom1"
-        let url3 = "https://httpbin.org/post"
+//        let url2 = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
+//        let url3 = "https://httpbin.org/post"
         
 //        AF.request(url2, method: .get, parameters:nil).responseJSON { (resp : AFDataResponse<Any>) in
 //            guard let resp = resp.value as? [String : Any] else { return }
@@ -96,13 +95,10 @@ extension HomeViewController {
 //        }
 //
         
- 
-        
-        
-        NetworkTools.requestData(method: .POST, URLString: url3,parameters: ["name" : "davidhuang"]) { (result : Any) in
-            print("post 获取到的数据是")
-            print(result)
-        }
+//        NetworkTools.requestData(method: .POST, URLString: url3,parameters: ["name" : "davidhuang"]) { (result : Any) in
+//            print("post 获取到的数据是")
+//            print(result)
+//        }
     }
     
     // 设置UI

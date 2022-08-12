@@ -23,9 +23,9 @@ private let kHeadViewID = "kHeadViewID"
 
 // MARK:- 类的定义
 class RecommendViewController: UIViewController {
-    
-    
     // MARK:- 定义属性
+    
+    private lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     private lazy var collectionView : UICollectionView = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -57,18 +57,25 @@ class RecommendViewController: UIViewController {
     // MARK:- 系统回调方法
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //设置UI
         setupUI()
+        
+        //请求数据
+        loadData()
     }
     
 }
 
 extension RecommendViewController {
-    // MARK:- 设置UI
+    // 设置UI
     private func setupUI() {
         //添加CollectionView
         view.addSubview(collectionView)
+    }
+    
+    // 请求数据
+    private func loadData() {
+        recommendVM.requestData()
     }
 }
 

@@ -13,6 +13,10 @@
 		5F24FAD428A0E52D009B6960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD328A0E52D009B6960 /* Assets.xcassets */; };
 		5F24FAD728A0E52D009B6960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F24FAD528A0E52D009B6960 /* LaunchScreen.storyboard */; };
 		5F5E25B528A4FBE2005C0140 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25B428A4FBE2005C0140 /* NetworkTools.swift */; };
+		5F5E25B828A505E0005C0140 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25B728A505E0005C0140 /* RecommendViewModel.swift */; };
+		5F5E25BA28A508E1005C0140 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25B928A508E1005C0140 /* Date-Extension.swift */; };
+		5F5E25BC28A50ED3005C0140 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25BB28A50ED3005C0140 /* AnchorGroup.swift */; };
+		5F5E25BE28A51BD7005C0140 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E25BD28A51BD7005C0140 /* AnchorModel.swift */; };
 		5F61121728A283BD0077C152 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121628A283BD0077C152 /* PageContentView.swift */; };
 		5F61121928A2885C0077C152 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121828A2885C0077C152 /* UIColor-Extension.swift */; };
 		5F61121B28A39E6A0077C152 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */; };
@@ -43,6 +47,10 @@
 		5F24FAD628A0E52D009B6960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F24FAD828A0E52D009B6960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5E25B428A4FBE2005C0140 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		5F5E25B728A505E0005C0140 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		5F5E25B928A508E1005C0140 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		5F5E25BB28A50ED3005C0140 /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		5F5E25BD28A51BD7005C0140 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		5F61121628A283BD0077C152 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		5F61121828A2885C0077C152 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
@@ -116,6 +124,14 @@
 			path = DouYuUI;
 			sourceTree = "<group>";
 		};
+		5F5E25B628A50562005C0140 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F5E25B728A505E0005C0140 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5FD046FB28A222AC00F17B2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +148,9 @@
 		5FD046FC28A222C100F17B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5FD2D28328A233480002E612 /* Controller */,
 				5FD2D28428A233480002E612 /* Model */,
 				5FD2D28528A233480002E612 /* View */,
+				5FD2D28328A233480002E612 /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -142,6 +158,7 @@
 		5FD046FD28A222C900F17B2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5F5E25B628A50562005C0140 /* ViewModel */,
 				5FD2D29428A233D20002E612 /* Controller */,
 				5FD2D29228A233D10002E612 /* Model */,
 				5FD2D29328A233D20002E612 /* View */,
@@ -195,6 +212,8 @@
 		5FD2D28428A233480002E612 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5F5E25BB28A50ED3005C0140 /* AnchorGroup.swift */,
+				5F5E25BD28A51BD7005C0140 /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +263,7 @@
 				5FD2D29828A242520002E612 /* UIBarButtonItem-Extension.swift */,
 				5F61121828A2885C0077C152 /* UIColor-Extension.swift */,
 				5F61121A28A39E6A0077C152 /* UIDevice-Extension.swift */,
+				5F5E25B928A508E1005C0140 /* Date-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -386,12 +406,16 @@
 				5F61121B28A39E6A0077C152 /* UIDevice-Extension.swift in Sources */,
 				5F61121728A283BD0077C152 /* PageContentView.swift in Sources */,
 				5F61121928A2885C0077C152 /* UIColor-Extension.swift in Sources */,
+				5F5E25BA28A508E1005C0140 /* Date-Extension.swift in Sources */,
 				5FD0470328A228D300F17B2A /* MainViewController.swift in Sources */,
+				5F5E25BC28A50ED3005C0140 /* AnchorGroup.swift in Sources */,
 				5FBA32F428A3D5210003E212 /* CollectionNormalCell.swift in Sources */,
 				5F24FACB28A0E529009B6960 /* AppDelegate.swift in Sources */,
 				5FBA32F028A3CE9D0003E212 /* CollectionHeaderView.swift in Sources */,
 				5FD2D29628A237F90002E612 /* HomeViewController.swift in Sources */,
 				5F61121D28A3B11A0077C152 /* RecommendViewController.swift in Sources */,
+				5F5E25B828A505E0005C0140 /* RecommendViewModel.swift in Sources */,
+				5F5E25BE28A51BD7005C0140 /* AnchorModel.swift in Sources */,
 				5FBA32F828A495780003E212 /* CollectionPrettyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

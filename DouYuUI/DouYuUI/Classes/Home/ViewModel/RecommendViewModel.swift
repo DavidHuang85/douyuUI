@@ -52,7 +52,7 @@ extension RecommendViewModel {
         
         
         //请求第二部分数据 --- 颜值数据
-        dispatchG.wait(timeout: .now() + 1)
+//        dispatchG.wait(timeout: .now() + 1)
         dispatchG.enter()
        let url2 = "http://capi.douyucdn.cn/api/v1/getverticalRoom"
        NetworkTools.requestData(method: .GET, URLString: url2, parameters: parameters) { (result : Any) in
@@ -83,7 +83,7 @@ extension RecommendViewModel {
         
         
         //3. 请求的是第三部分数据  --- 游戏推荐数据
-        dispatchG.wait(timeout: .now() + 1)
+//        dispatchG.wait(timeout: .now() + 1)
         dispatchG.enter()
         let url3 = "http://capi.douyucdn.cn/api/v1/getHotCate"
         NetworkTools.requestData(method:.GET, URLString: url3,parameters:parameters) { (result : Any) in

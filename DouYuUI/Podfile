@@ -3,7 +3,18 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'DouYuUI' do
+  #网络请求
   pod 'Alamofire','5.4.4'
-  pod 'HandyJSON'
+  
+  #图片下载
   pod 'Kingfisher','5.15.8'
+  
+  #Json 和 Model转换
+  pod 'SwiftyJSON'
+  
+  #上拉/下拉
+  pod 'ESPullToRefresh'
+  
+  #轮播图
+  pod 'FSPagerView'
 end

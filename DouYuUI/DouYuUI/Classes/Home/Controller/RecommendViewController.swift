@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ESPullToRefresh
+
 
 // MARK:- 常量定义
 private let kItemMargin : CGFloat = 10
@@ -50,6 +52,21 @@ class RecommendViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight];
         
         
+        // MARK:- 添加上拉 和 下拉 操作
+        collectionView.es.addPullToRefresh {
+            self.loadData()
+        }
+        
+        collectionView.es.addInfiniteScrolling {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
+                print("模拟执行了 获取更多数据的接口")
+                DispatchQueue.main.async {
+                    collectionView.es.stopLoadingMore()
+                }
+            }
+        }
+        
+        
         return collectionView
     } ()
 
@@ -61,7 +78,8 @@ class RecommendViewController: UIViewController {
         setupUI()
         
         //请求数据
-        loadData()
+//        loadData()
+        collectionView.es.startPullToRefresh()
     }
     
 }
@@ -76,6 +94,7 @@ extension RecommendViewController {
     // 请求数据
     private func loadData() {
         recommendVM.requestData {
+            self.collectionView.es.stopPullToRefresh()
             self.collectionView.reloadData()
         }
     }

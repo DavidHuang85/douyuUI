@@ -9,10 +9,10 @@
 import UIKit
 
 class CollectionNormalCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    // MARK:- 控件属性
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    // MARK:- 模型属性
+    
 
 }

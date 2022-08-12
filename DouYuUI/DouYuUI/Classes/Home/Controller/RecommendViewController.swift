@@ -97,8 +97,11 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
         var cell : UICollectionViewCell!
         
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
-            return cell
+            let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+            
+            let group = self.recommendVM.anchorGroups[indexPath.section]
+            cell1.anchor = group.anchorList[indexPath.row]
+            return cell1
         }
         
         cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)

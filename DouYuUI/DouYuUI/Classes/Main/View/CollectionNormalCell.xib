@@ -77,6 +77,9 @@
             <size key="customSize" width="363" height="192"/>
             <connections>
                 <outlet property="iconImageView" destination="Dqw-Rc-rxf" id="jD8-Vi-dey"/>
+                <outlet property="onlineBtn" destination="PF8-n7-LG0" id="J6E-a3-jeB"/>
+                <outlet property="subtitleLable" destination="6Mh-Da-4am" id="r5l-WJ-d8R"/>
+                <outlet property="titleLable" destination="jsG-De-PhQ" id="WhY-nH-Jsd"/>
             </connections>
             <point key="canvasLocation" x="-29.710144927536234" y="56.919642857142854"/>
         </collectionViewCell>

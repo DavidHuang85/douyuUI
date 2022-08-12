@@ -94,7 +94,6 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell!
         
         if indexPath.section == 1 {
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
@@ -104,9 +103,12 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
             return cell1
         }
         
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
         
-        return cell
+        let group = self.recommendVM.anchorGroups[indexPath.section]
+        cell2.anchor = group.anchorList[indexPath.row]
+        
+        return cell2
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

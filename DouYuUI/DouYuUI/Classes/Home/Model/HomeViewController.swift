@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
         setupUI()
         
         // MARK:- test function
-        myTest()
+//        myTest()
     }
 }
 
@@ -82,23 +82,6 @@ extension HomeViewController {
         
         print("当前设备的tabBar高度 UIDevice.devSystemTabBarHeigh()是:\(UIDevice.devSystemTabBarHeigh())")
         print("====相关测试数据 结束====")
-        
-//        http://capi.douyucdn.cn/api/v1/getbigDataRoom
-//        let url = "https://httpbin.org/get"
-//        let url2 = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
-//        let url3 = "https://httpbin.org/post"
-        
-//        AF.request(url2, method: .get, parameters:nil).responseJSON { (resp : AFDataResponse<Any>) in
-//            guard let resp = resp.value as? [String : Any] else { return }
-//            guard let data = resp["data"] else { return }
-//            print(data)
-//        }
-//
-        
-//        NetworkTools.requestData(method: .POST, URLString: url3,parameters: ["name" : "davidhuang"]) { (result : Any) in
-//            print("post 获取到的数据是")
-//            print(result)
-//        }
     }
     
     // 设置UI

@@ -25,11 +25,11 @@ class AnchorGroup: NSObject {
     }
     
     //组的标题
-    @objc var tag_name : String = ""
+    @objc var tag_name : String = "热门"
     //组的icon
-    @objc var small_icon_url : String  = ""
+    @objc var small_icon_url : String  = "home_header_phone"
     //组的icon
-    @objc var icon_url : String  = ""
+    @objc var icon_url : String  = "home_header_phone"
     
     init(dic : [String : NSObject]) {
         super.init()

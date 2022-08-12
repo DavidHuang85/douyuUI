@@ -75,22 +75,22 @@ extension RecommendViewController {
     
     // 请求数据
     private func loadData() {
-        recommendVM.requestData()
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+        }
     }
 }
 
 // MARK:- 遵循UICollectionViewDataSource 和 UICollectionViewDelegateFlowLayout 协议
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = self.recommendVM.anchorGroups[section]
+        return group.anchorList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -108,10 +108,13 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeadViewID, for: indexPath)
+        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeadViewID, for: indexPath) as! CollectionHeaderView
+        headView.group = self.recommendVM.anchorGroups[indexPath.section]
+        
         return headView
     }
     
+    //不同UICollectionViewCell的 CGSize
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
         

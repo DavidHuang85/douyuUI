@@ -14,7 +14,7 @@ private let kNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
 private let kSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
 
 // MARK:- 定义协议
-protocol PageTitleViewDelegate : class {
+protocol PageTitleViewDelegate : AnyObject {
     func pageTitleView(titleView : PageTitleView , selectedInex index : Int)
 }
 

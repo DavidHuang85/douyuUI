@@ -11,25 +11,14 @@ import HandyJSON
 
 class AnchorGroup: HandyJSON {
     //定义主播的房间列表
-    var anchorList : [AnchorModel]  {
+    var anchorList : [AnchorModel] {
         get {
             return room_list
         }
     }
     
     //组中的房间
-    lazy var room_list : [AnchorModel] = [AnchorModel]()
-//    {
-//        // MARK:- 方式二 解析 room_list
-//        didSet {
-//            anchorList.removeAll()
-//            guard let roomList = room_list else { return }
-//            for dict in roomList {
-//                guard let anchor = AnchorModel.deserialize(from: dict) else { continue }
-//                anchorList.append(anchor)
-//            }
-//        }
-//    }
+    var room_list : [AnchorModel] = [AnchorModel]()
     
     //组的标题
     var tag_name : String = "热门"

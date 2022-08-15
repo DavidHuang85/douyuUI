@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import HandyJSON
 
-class AnchorGroup: HandyJSON {
+class AnchorGroup: BaseModel {
     //定义主播的房间列表
     var anchorList : [AnchorModel] {
         get {
@@ -21,12 +20,9 @@ class AnchorGroup: HandyJSON {
     var room_list : [AnchorModel] = [AnchorModel]()
     
     //组的标题
-    var tag_name : String = "热门"
+    var tag_name : String = ""
     //组的icon
     var small_icon_url : String  = "home_header_phone"
     //组的icon
     var icon_url : String  = "home_header_phone"
-    
-    //使用 HandyJSON 进行解析
-    required init() {}
 }

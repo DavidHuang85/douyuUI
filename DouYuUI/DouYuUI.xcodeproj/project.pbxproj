@@ -36,6 +36,7 @@
 		5FD2D29928A242530002E612 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2D29828A242520002E612 /* UIBarButtonItem-Extension.swift */; };
 		5FD2D29B28A251C00002E612 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2D29A28A251C00002E612 /* PageTitleView.swift */; };
 		5FD2D29D28A255250002E612 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2D29C28A255250002E612 /* common.swift */; };
+		BEA1D6E028AA4E490094D604 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1D6DF28AA4E490094D604 /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		5FD2D29C28A255250002E612 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		8DD29C656852A9221273F633 /* Pods-DouYuUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuUI.debug.xcconfig"; path = "Target Support Files/Pods-DouYuUI/Pods-DouYuUI.debug.xcconfig"; sourceTree = "<group>"; };
 		94CFA04DF98C83BFB40BBFD9 /* Pods_DouYuUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA1D6DF28AA4E490094D604 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				5F5E25BB28A50ED3005C0140 /* AnchorGroup.swift */,
 				5F5E25BD28A51BD7005C0140 /* AnchorModel.swift */,
+				BEA1D6DF28AA4E490094D604 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				5FD2D29628A237F90002E612 /* HomeViewController.swift in Sources */,
 				5F61121D28A3B11A0077C152 /* RecommendViewController.swift in Sources */,
 				5F5E25B828A505E0005C0140 /* RecommendViewModel.swift in Sources */,
+				BEA1D6E028AA4E490094D604 /* BaseModel.swift in Sources */,
 				5F5E25BE28A51BD7005C0140 /* AnchorModel.swift in Sources */,
 				5FBA32F828A495780003E212 /* CollectionPrettyCell.swift in Sources */,
 			);

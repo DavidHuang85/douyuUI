@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import HandyJSON
 
-class AnchorModel : HandyJSON {
+
+class AnchorModel : BaseModel {
     //房间号
     var room_id : String = ""
     //房间图片
@@ -29,7 +29,4 @@ class AnchorModel : HandyJSON {
     
     //所在城市
     var anchor_city : String = ""
-        
-    //使用 HandyJSON 进行解析
-    required init() {}
 }

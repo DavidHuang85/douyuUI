@@ -20,9 +20,6 @@ extension RecommendViewModel {
         //定义参数
         let parameters =  ["limit": "4","offset":"0","time":Date.getCurrentDate()]
         //请求i第一部分数据
-        
-        //        let dispatchG = DispatchGroup()
-        
         self.dispatchGroup.enter()
         let url1 = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
         NetworkTools.requestData(method: .GET, URLString: url1, parameters: ["time": Date.getCurrentDate()]) { (result : Any) in
@@ -40,7 +37,6 @@ extension RecommendViewModel {
             }
             
             let tttt = ["tag_name" : "热门","small_icon_url":"home_header_hot","icon_url":"home_header_hot"]
-            //               let group = AnchorGroup(dic: tttt as [String : NSObject])
             guard let group = AnchorGroup.deserialize(from: tttt) else { return }
             self.anchorGroups.append(group)
             

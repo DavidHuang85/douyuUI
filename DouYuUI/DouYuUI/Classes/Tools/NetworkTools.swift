@@ -18,11 +18,19 @@ class NetworkTools{
     class func requestData(method : MethodType,URLString : String,parameters : [String : String]? = nil,finishedCallBack : @escaping (_ reuslt : Any)->()) {
         let method = method == .GET ? HTTPMethod.get : HTTPMethod.post
         AF.request(URLString, method: method, parameters:parameters).responseJSON { (resp : AFDataResponse<Any>) in
-            guard let results = resp.value else {
-                print(resp.error?.errorDescription ?? "请求失败~~~")
-                return
+            switch resp.result {
+            case .success(_):
+                guard let results = resp.value else {
+                    print(resp.error?.errorDescription ?? "请求失败~~~")
+                    return
+                }
+                finishedCallBack(results)
+            case .failure(let error):
+                print("网络请求出错了,错误信息如下：")
+                print(error)
             }
-            finishedCallBack(results)
+            
+            
         }
     }
 }

@@ -44,6 +44,7 @@ extension RecommendViewModel {
                 guard let anchor = AnchorModel.deserialize(from: dict) else { continue}
                 group.room_list.append(anchor)
             }
+            
             self.dispatchGroup.leave()
             
         }

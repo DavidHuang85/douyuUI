@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 class AnchorGroup: BaseModel {
     //定义主播的房间列表
@@ -25,4 +26,18 @@ class AnchorGroup: BaseModel {
     var small_icon_url : String  = "home_header_phone"
     //组的icon
     var icon_url : String  = "home_header_phone"
+    
+    
+    //MARK: - 字段映射
+    
+//    func mapping(mapper: HelpingMapper) {
+//        // 指定 id 字段用 "cat_id" 去解析
+//        mapper.specify(property: &id, name: "cat_id")
+//
+//        // 指定 parent 字段用这个方法去解析
+//        mapper.specify(property: &parent) { (rawString) -> (String, String) in
+//            let parentNames = rawString.characters.split{$0 == "/"}.map(String.init)
+//            return (parentNames[0], parentNames[1])
+//        }
+//    }
 }

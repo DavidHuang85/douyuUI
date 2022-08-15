@@ -10,7 +10,7 @@ target 'DouYuUI' do
   pod 'Kingfisher','5.15.8'
   
   #Json 和 Model转换
-  pod 'SwiftyJSON'
+  pod 'HandyJSON'
   
   #上拉/下拉
   pod 'ESPullToRefresh'

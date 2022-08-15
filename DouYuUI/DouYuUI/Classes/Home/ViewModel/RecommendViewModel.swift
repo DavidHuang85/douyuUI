@@ -39,12 +39,13 @@ extension RecommendViewModel {
                }
                
                let tttt = ["tag_name" : "热门","small_icon_url":"home_header_hot","icon_url":"home_header_hot"]
-               let group = AnchorGroup(dic: tttt as [String : NSObject])
+//               let group = AnchorGroup(dic: tttt as [String : NSObject])
+               guard let group = AnchorGroup.deserialize(from: tttt) else { return }
                self.anchorGroups.append(group)
                
                for dict in dataArr {
-                   let anchor = AnchorModel(dict: dict)
-                   group.anchorList.append(anchor)
+                guard let anchor = AnchorModel.deserialize(from: dict) else { continue}
+                   group.room_list.append(anchor)
                }
                 dispatchG.leave()
             
@@ -70,16 +71,16 @@ extension RecommendViewModel {
            }
            
            let tttt = ["tag_name" : "颜值"]
-           let group = AnchorGroup(dic: tttt as [String : NSObject])
+//           let group = AnchorGroup(dic: tttt as [String : NSObject])
+          guard let group = AnchorGroup.deserialize(from: tttt) else { return }
            self.anchorGroups.append(group)
            
            for dict in dataArr {
-               let anchor = AnchorModel(dict: dict)
-               group.anchorList.append(anchor)
+            guard let anchor = AnchorModel.deserialize(from: dict) else { continue }
+            group.room_list.append(anchor)
            }
             dispatchG.leave()
        }
-       
         
         
         //3. 请求的是第三部分数据  --- 游戏推荐数据
@@ -100,7 +101,8 @@ extension RecommendViewModel {
             }
             
             for dict in dataArr {
-                let anchorG = AnchorGroup(dic: dict)
+                guard let anchorG = AnchorGroup.deserialize(from: dict) else { return }
+                
                 self.anchorGroups.append(anchorG)
             }
             dispatchG.leave()

@@ -17,4 +17,10 @@ target 'DouYuUI' do
   
   #轮播图
   pod 'FSPagerView'
+  
+  #键盘处理
+  pod 'IQKeyboardManagerSwift'
+  
+  #自动布局
+  pod 'SnapKit'
 end

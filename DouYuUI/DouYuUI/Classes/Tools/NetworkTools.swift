@@ -15,21 +15,19 @@ enum MethodType {
 }
 
 class NetworkTools{
+    //MARK: - 数据请求
     class func requestData(method : MethodType,URLString : String,parameters : [String : String]? = nil,finishedCallBack : @escaping (_ reuslt : Any)->()) {
         let method = method == .GET ? HTTPMethod.get : HTTPMethod.post
         AF.request(URLString, method: method, parameters:parameters).responseJSON { (resp : AFDataResponse<Any>) in
             switch resp.result {
             case .success(let json):
-//                print("json的值是：")
-//                print(json)
-                
-//                let baseData = BaseModel.deserialize(from: json)
-                
-                
                 guard let obj = BaseModel.deserialize(from: json as? Dictionary) else {
                     print("服务器返回数据可能有问题 数据是：\(json)")
                     return
                 }
+                
+                print(obj)
+                
                 print("请求地址是：\(resp.request?.url?.absoluteString ?? "")")
                 print("error------>\(obj.error)")
                 
@@ -43,8 +41,8 @@ class NetworkTools{
                 print("网络请求出错了,错误信息如下：")
                 print(error)
             }
-            
-            
         }
     }
+    
+    //MARK: - 图片上传
 }

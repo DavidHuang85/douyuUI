@@ -12,6 +12,8 @@ import HandyJSON
 
 //MARK: - JSon解析模型的基类
 class BaseModel: HandyJSON {
+    var error : Int = -1
+    var data : [[String : NSObject]]?
     //MARK: - 使用 HandyJSON 进行解析
     required init() {}
 }

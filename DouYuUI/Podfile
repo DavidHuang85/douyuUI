@@ -23,4 +23,27 @@ target 'DouYuUI' do
   
   #自动布局
   pod 'SnapKit'
+  
+  #网络状态检测
+  pod 'Reachability'
+  
+  #本地存储
+  pod 'SwiftyUserDefaults'
+  
+  #定时器
+  pod 'SwiftyTimer'
+  
+  #系统钥匙串
+  pod 'KeychainAccess'
+  
+  #指示器
+  pod 'NVActivityIndicatorView'
+  
+  #GPUImage2 图片、视频等GPU加速处理
+  pod 'GPUImage2'
+  
+  # Swift 5 轻量级聊天框架
+  pod 'Chatto', '= 4.1.0'
+  pod 'ChattoAdditions', '= 4.1.0' # if you want to use the cells or the input component
+  
 end

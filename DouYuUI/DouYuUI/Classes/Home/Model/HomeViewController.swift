@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 
 private let kPageTitleViewH : CGFloat = 70
@@ -20,7 +21,7 @@ class HomeViewController: UIViewController {
         let titles  = ["推荐","游戏","娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: titleFrame, titles: titles);
         
-    
+        
         pageTitleView.delegate = self
         
         return pageTitleView
@@ -51,7 +52,7 @@ class HomeViewController: UIViewController {
     } ()
     
     
-
+    
     
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -61,7 +62,7 @@ class HomeViewController: UIViewController {
         setupUI()
         
         // MARK:- test function
-//        myTest()
+        myTest()
     }
 }
 
@@ -71,6 +72,13 @@ extension HomeViewController {
     private func myTest() {
         
         // MARK:- for test hjl
+        
+        //        testDeviceInfo()
+//        testAlamofireImage()
+        
+    }
+    
+    private func testDeviceInfo () {
         print("****相关测试数据 开始****")
         print("当前设备的名称 UIDevice.current.model是:\(UIDevice.current.model)")
         
@@ -84,13 +92,36 @@ extension HomeViewController {
         print("====相关测试数据 结束====")
     }
     
+    private func testAlamofireImage () {
+        
+        //        let url = URL(string: "https://httpbin.org/image/png")
+        
+        //        AF.request().responseImage { (response : AFDataResponse<Image>) in
+        //            debugPrint(response)
+        //        }
+        
+        AF.request("https://httpbin.org/image/png").responseImage { (response : AFDataResponse<Image>) in
+            
+            debugPrint("response 是:")
+            debugPrint(response)
+            
+            
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            print("**********")
+        }
+        
+    }
+    
     // 设置UI
     private func setupUI () {
         
         //0 不需要调整 scrollView的内边距
         
         if #available(iOS 11.0, *) {
-//            scrollView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+            //            scrollView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
@@ -107,7 +138,7 @@ extension HomeViewController {
         view.addSubview(pageContentView)
     }
     
-
+    
     
     private func setupNavigationBar () {
         //导航栏左侧
@@ -118,17 +149,17 @@ extension HomeViewController {
         
         /*
          //方法一 类方法
-        let historyItem = UIBarButtonItem.createItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
-        let searchitem = UIBarButtonItem.createItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
-        let qrcodeItem = UIBarButtonItem.createItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
-        */
+         let historyItem = UIBarButtonItem.createItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+         let searchitem = UIBarButtonItem.createItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+         let qrcodeItem = UIBarButtonItem.createItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
+         */
         
         
         //方法二 便利构造器
         let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
         let searchitem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
-
+        
         navigationItem.rightBarButtonItems = [historyItem,searchitem,qrcodeItem];
     }
     

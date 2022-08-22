@@ -39,9 +39,9 @@ class HomeViewController: UIViewController {
         
         for _ in 0..<3 {
             let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.RandomColor()
+             
             arrVC.append(vc)
-        }
+        } 
         
         let view = PageContentView(frame: CGRect(x: 0, y: kNavigationBarH + kStatusH + kPageTitleViewH, width:kScreenW, height: pageContentViewH), chileVcs: arrVC, parentVc: self!)
         
@@ -106,8 +106,8 @@ extension HomeViewController {
             debugPrint(response)
             
             
-            print(response.request)
-            print(response.response)
+//            print(response.request)
+//            print(response.response)
             debugPrint(response.result)
             
             print("**********")

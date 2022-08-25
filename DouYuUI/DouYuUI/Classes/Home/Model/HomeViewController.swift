@@ -13,8 +13,8 @@ import FSPagerView
 import SnapKit
 
 
-private let kPageTitleViewH : CGFloat = 70
-private let kAdBannerView : CGFloat = 200
+private let kPageTitleViewH : CGFloat = 60
+private let kAdBannerView : CGFloat = 150
 
 class HomeViewController: UIViewController {
     
@@ -63,6 +63,8 @@ class HomeViewController: UIViewController {
         
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         pagerView.itemSize = FSPagerView.automaticSize
+        
+//        pagerView.transformer = FSPagerViewTransformer(type: .zoomOut)
         
         return pagerView
     }()

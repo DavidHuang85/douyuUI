@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'DouYuUI' do
@@ -8,7 +8,7 @@ target 'DouYuUI' do
   
   #图片下载
   pod 'Kingfisher','5.15.8'
-  pod 'AlamofireImage'
+#  pod 'AlamofireImage'
   
   #Json 和 Model转换
   pod 'HandyJSON'
@@ -26,19 +26,19 @@ target 'DouYuUI' do
   pod 'SnapKit'
   
   #网络状态检测
-  pod 'Reachability'
+#  pod 'Reachability'
   
   #本地存储
-  pod 'SwiftyUserDefaults'
+#  pod 'SwiftyUserDefaults'
   
   #定时器
-  pod 'SwiftyTimer'
+#  pod 'SwiftyTimer'
   
   #系统钥匙串
-  pod 'KeychainAccess'
+#  pod 'KeychainAccess'
   
   #指示器
-  pod 'NVActivityIndicatorView'
+#  pod 'NVActivityIndicatorView'
   
   #GPUImage2 图片、视频等GPU加速处理
 #  pod 'GPUImage2'
@@ -48,7 +48,7 @@ target 'DouYuUI' do
 #  pod 'ChattoAdditions', '= 4.1.0' # if you want to use the cells or the input component
   
   #分享
-  pod 'MonkeyKing'
+#  pod 'MonkeyKing'
   
   
   

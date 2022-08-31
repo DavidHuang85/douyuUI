@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
+//import AlamofireImage
 import FSPagerView
 import SnapKit
 
@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         //设置下标指示器颜色（选中状态和普通状态）
         pageControl.setFillColor(.lightGray, for: .normal)
         pageControl.setFillColor(.red, for: .selected)
+//        pageControl.contentHorizontalAlignment = .center
         
         //设置下标指示器图片（选中状态和普通状态）
         //pageControl.setImage(UIImage.init(named: "1"), for: .normal)
@@ -175,18 +176,18 @@ extension HomeViewController {
         //            debugPrint(response)
         //        }
         
-        AF.request("https://httpbin.org/image/png").responseImage { (response : AFDataResponse<Image>) in
-            
-            debugPrint("response 是:")
-            debugPrint(response)
-            
-            
-            //            print(response.request)
-            //            print(response.response)
-            debugPrint(response.result)
-            
-            print("**********")
-        }
+//        AF.request("https://httpbin.org/image/png").responseImage { (response : AFDataResponse<Image>) in
+//            
+//            debugPrint("response 是:")
+//            debugPrint(response)
+//            
+//            
+//            //            print(response.request)
+//            //            print(response.response)
+//            debugPrint(response.result)
+//            
+//            print("**********")
+//        }
         
     }
     

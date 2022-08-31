@@ -21,6 +21,8 @@ class NetworkTools{
         AF.request(URLString, method: method, parameters:parameters).responseJSON { (resp : AFDataResponse<Any>) in
             switch resp.result {
             case .success(let json):
+                print("resp.value = ")
+                print(resp.value ?? "")
                 guard let obj = BaseModel.deserialize(from: json as? Dictionary) else {
                     print("服务器返回数据可能有问题 数据是：\(json)")
                     return
@@ -39,6 +41,7 @@ class NetworkTools{
                 finishedCallBack(results)
             case .failure(let error):
                 print("网络请求出错了,错误信息如下：")
+
                 print(error)
             }
         }
